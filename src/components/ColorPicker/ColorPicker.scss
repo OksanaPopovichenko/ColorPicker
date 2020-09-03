@@ -1,0 +1,181 @@
+body{
+    background: #e4e1e0;
+}
+
+.wrap{
+    padding: 50px;
+
+    .color-picker{
+        width: 300px;
+        position: relative;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        margin: 0 auto;
+        background: white;
+        height: 52px;
+        box-shadow: 0px 0px 21px 7px rgba(0,0,0,0.08);
+
+        .text-field{
+            width: 100%;
+        
+            input{
+                height: 50px;
+                font-size: 18px;
+                color: #999a9b;
+                padding: 0 15px;
+            }
+    
+            .MuiInput-underline:after,
+            .MuiInput-underline:before{
+                display: none;
+            }
+        }
+
+        .btn-down, .btn-color{
+            height: 50px;
+            min-width: 50px;
+            box-sizing: border-box;
+            border-left: 1px solid #cccccc;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: white;
+
+            svg{
+                font-size: 22px;
+                color: #999a9b;
+            }
+
+            .arrow-down{
+                border: 10px solid transparent;
+                border-top: 10px solid #999a9b;
+            }
+        }
+
+        .color-squadre{
+            width: 20px;
+            height: 20px;
+        }
+    }    
+
+    .color-list-wrap{
+        width: 200px;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        &::before{
+            content: '';
+            position: absolute;
+            border: 13px solid transparent;
+            border-bottom: 13px solid white;
+            top: -26px;
+            right: 12px;
+        }
+        
+        .color-list{
+            padding: 0;
+            list-style: none;
+            margin: 0;
+            width: 100%;
+
+            li{
+                border-bottom: 1px solid #cccccc;
+                text-transform: uppercase;
+                color: gray;
+                font-weight: bold;
+                padding: 10px;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                &:hover{
+                    background: #0478b4;
+                    color: #cbd4df;
+                }
+
+                div{
+                    width: 15px;
+                    height: 15px;
+                    border-bottom: 0;
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+    .color-slider-wrap{
+        top: 70px;
+        right: 50px;
+        width: 300px;
+        
+        .sliders{
+            width: 100%;
+            padding: 10px;
+
+            & > .track{
+                padding: 7px 0;
+                display: flex;
+                flex-direction: revert;
+                align-items: center;
+                justify-content: center;
+
+                label{
+                    text-transform: uppercase;
+                    color: gray;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+            }
+
+            input[type="range"] {
+                -webkit-appearance: none;
+                outline: none;
+                border-radius: 50px;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 0;
+                height: 2px;
+            }
+    
+            #red {
+                background: linear-gradient(90deg, rgb(0,0,0), rgb(255,0,0));
+            }
+
+            #green {
+                background: linear-gradient(90deg, rgb(0,0,0), rgb(0,255,0));
+            }
+
+            #blue {
+                background: linear-gradient(90deg, rgb(0,0,0), rgb(0,0,255));
+            }
+            
+            .btns-group{
+                .cancel{
+                    background: #d2d3d4;
+                    color: #9A9BA4;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-right: 10px;
+                    border: 1px solid #b2b4b5;
+                }
+
+                .okay{
+                    background: #5ea35d;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: bold;
+                    border: 1px solid #b2b4b5;
+                }
+            }
+        }
+    }
+}
